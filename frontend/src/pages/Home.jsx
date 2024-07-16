@@ -1,9 +1,9 @@
 import Comments from "../comments/Comments";
 import { useEffect } from "react";
-import "../styles/Home.css";
 import { Spotify } from "react-spotify-embed";
 import { getPosts as getPostsApi } from "../comments/comments-api";
 import { useState } from "react";
+import LightDarkMode from "../components/light-dark-mode";
 
 function Home() {
   // gather current user id
@@ -23,6 +23,8 @@ function Home() {
   // We will create a post and relative comments section for each Post entity in our database
   return (
     <div>
+      <LightDarkMode />
+
       {posts.map((post, index) => (
         <div className="post-container" key={index}>
           <br />
