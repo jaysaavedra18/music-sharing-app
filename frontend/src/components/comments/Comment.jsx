@@ -39,7 +39,7 @@ const Comment = ({
       <div className="comment-right-part">
         <div className="comment-content">
           <div className="comment-author">{comment.username}</div>
-          <div>{createdAt}</div>
+          <div className="comment-date">{createdAt}</div>
         </div>
         {!isEditing && <div className="comment-text">{comment.body}</div>}
         {isEditing && (
@@ -60,6 +60,7 @@ const Comment = ({
               onClick={() =>
                 setActiveComment({ id: comment.id, type: "replying" })
               }
+              className="comment-action-text"
             >
               Reply
             </div>
@@ -70,6 +71,7 @@ const Comment = ({
               onClick={() =>
                 setActiveComment({ id: comment.id, type: "editing" })
               }
+              className="comment-action-text"
             >
               Edit
             </div>
@@ -78,6 +80,7 @@ const Comment = ({
             <div
               comment="comment-action"
               onClick={() => deleteComment(comment.id)}
+              className="comment-action-text"
             >
               Delete
             </div>

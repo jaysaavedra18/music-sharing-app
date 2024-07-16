@@ -1,0 +1,17 @@
+:root {
+  --body_background: white;
+  --body_color: black;
+  --link_color: rgb(59, 130, 246);
+  --header_color: rgb(235, 235, 255);
+}
+
+[data-theme="dark"] {
+  --body_background: #282c34;
+  --body_color: white;
+  --link_color: cyan;
+  --header_color: rgb(75, 0, 130);
+}
+
+* {
+  transition: all 0.3s ease;
+}

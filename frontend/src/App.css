@@ -1,0 +1,22 @@
+.App-header {
+  background-color: var(--body_background);
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: var(--body_color);
+}
+
+.App-link {
+  color: var(--link_color);
+}
+
+#app-container {
+  background-color: var(--body_background);
+  border: 1px solid var(--body_background);
+  padding: 20px;
+}
+
+* {
+  margin: 0;
+}

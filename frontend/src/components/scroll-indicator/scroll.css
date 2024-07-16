@@ -5,23 +5,24 @@
   z-index: 1;
   width: 100%;
   text-align: center;
-  background-color: #000000;
+  background-color: var(--header_color);
+  color: var(--body_color);
+  margin-bottom: 20px;
 }
 
 .top-container h1 {
   font-size: 5vw;
-  color: #fff;
+  color: var(--body_color);
 }
 
 .scroll-progress-container {
   width: 100%;
   height: 10px;
-  background: #fff;
 }
 
 .current-progress-bar {
   height: 10px;
-  background: #5d45ff;
+  background: var(--body_color);
   width: 0%;
 }
 
