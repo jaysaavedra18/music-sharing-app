@@ -1,4 +1,4 @@
-import "../styles/Comments.css";
+import "./Comments.css";
 import CommentForm from "./CommentForm";
 const Comment = ({
   comment,
@@ -19,15 +19,6 @@ const Comment = ({
   const canReply = Boolean(currentUserId);
   const canEdit = currentUserId === comment.userId && !timePassed;
   const canDelete = currentUserId === comment.userId && !timePassed;
-  // console.log(
-  //   "canReply, canEdit, canDelete, timePassed, currentUserId, comment.userId",
-  //   canReply,
-  //   canEdit,
-  //   canDelete,
-  //   timePassed,
-  //   typeof currentUserId,
-  //   typeof comment.userId
-  // );
 
   const createdAt = new Date(comment.createdAt).toLocaleDateString();
   const isReplying =

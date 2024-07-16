@@ -1,9 +1,13 @@
-import Comments from "../comments/Comments";
+import Comments from "../components/comments/Comments";
 import { useEffect } from "react";
 import { Spotify } from "react-spotify-embed";
-import { getPosts as getPostsApi } from "../comments/comments-api";
+import { getPosts as getPostsApi } from "../components/comments/comments-api";
 import { useState } from "react";
 import LightDarkMode from "../components/light-dark-mode";
+import TreeView from "../components/tree-view";
+import menus from "../components/tree-view/data";
+import ScrollIndicator from "../components/scroll-indicator";
+import DarkMode from "../components/dark-mode/DarkMode";
 
 function Home() {
   // gather current user id
@@ -23,7 +27,13 @@ function Home() {
   // We will create a post and relative comments section for each Post entity in our database
   return (
     <div>
-      <LightDarkMode />
+      {/* <DarkMode /> */}
+      <ScrollIndicator
+        url={"https://dummyjson.com/products?limit=100"}
+        title={"Hello World !"}
+      />
+
+      {/* <TreeView menus={menus} /> */}
 
       {posts.map((post, index) => (
         <div className="post-container" key={index}>

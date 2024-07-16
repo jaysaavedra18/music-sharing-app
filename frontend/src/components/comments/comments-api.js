@@ -1,4 +1,4 @@
-import api from '../api'
+import api from '../../api'
 
 // Function to fetch comments from the api.
 export const getComments = async (postId) => {
