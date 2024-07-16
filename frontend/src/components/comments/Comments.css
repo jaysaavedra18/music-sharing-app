@@ -4,16 +4,12 @@
 
 .comments-title {
   font-size: 30px;
-  margin-bottom: 20px;
+  margin-bottom: 0px;
   color: var(--body_color);
 }
 
 .comments-container {
   margin-top: 40px;
-}
-
-.comment-form-title {
-  font-size: 22px;
 }
 
 .comment-form-textarea {

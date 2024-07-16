@@ -80,6 +80,9 @@ class CurrentUserView(generics.RetrieveAPIView):
 class CustomTokenObtainPairView(TokenObtainPairView):
     serializer_class = CustomTokenObtainPairSerializer
 
-class PostList(generics.ListAPIView):
+class PostListCreate(generics.ListCreateAPIView):
     queryset = Post.objects.all()
     serializer_class = PostSerializer
+
+    def perform_create(self, serializer):
+        serializer.save()

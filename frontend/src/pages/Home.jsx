@@ -1,45 +1,13 @@
-import Comments from "../components/comments/Comments";
-import { useEffect } from "react";
-import { Spotify } from "react-spotify-embed";
-import { getPosts as getPostsApi } from "../components/comments/comments-api";
-import { useState } from "react";
-import ScrollIndicator from "../components/scroll-indicator";
-import DarkMode from "../components/dark-mode/DarkMode";
+import RenderComponents from "../components/RenderComponents";
+import Posts from "../components/posts/Posts";
 
 function Home() {
-  // gather current user id
-  const currentUserId = parseInt(localStorage.getItem("currentUserId"));
-  // define states for posts
-  const [posts, setPosts] = useState([]);
-  // fetch posts from api
-  useEffect(() => {
-    getPostsApi().then((data) => {
-      console.log("posts-data", data);
-      setPosts(data);
-    });
-  }, []);
-
-  posts.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
-
   // We will create a post and relative comments section for each Post entity in our database
   return (
     <div>
-      <ScrollIndicator
-        url={"https://dummyjson.com/products?limit=100"}
-        title={"Hello World !"}
-      />
-      <br />
-      <br />
+      <RenderComponents />
 
-      <DarkMode />
-
-      {posts.map((post, index) => (
-        <div className="post-container" key={index}>
-          <br />
-          <Spotify wide link={post.link} />
-          <Comments currentUserId={currentUserId} postId={post.id} />
-        </div>
-      ))}
+      <Posts />
     </div>
   );
 }

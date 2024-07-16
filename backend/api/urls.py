@@ -13,7 +13,7 @@ urlpatterns = [
     path("comments/update/<int:pk>/", views.CommentUpdate.as_view(), name="update-comment"),
 
     # URL for listing posts
-    path('posts/', views.PostList.as_view(), name='post-list'),
+    path('posts/', views.PostListCreate.as_view(), name='post-list'),
 
     # Get only comments of a specific post
     path('comments/post/<int:post_id>/', views.CommentListByPost.as_view(), name='comment-list-by-post'),
