@@ -91,6 +91,7 @@ For deployment, MusicSharingApp is fully deployed on AWS:
 - Frontend: Hosted on S3 bucket with static hosting
 - Backend: Deployed on EC2 instance within a private subnet, accessible via NAT Gateway and Elastic IP
 - Content Delivery: AWS CloudFront provides CDN for global reach
+- Check out the production build here: http://json-portfolio.s3-website.us-east-2.amazonaws.com/
 
 ## Contributing
 
