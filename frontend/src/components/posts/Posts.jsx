@@ -41,11 +41,22 @@ function Posts() {
       alert("Error: ensure that your music link is of Spotify");
       return;
     }
+
     console.log("Shared link: ", text);
-    createPostApi(text).then((post) => {
-      console.log(post);
-      setBackendPosts([post, ...backendPosts]);
-    });
+
+    // Assuming createPostApi returns a Promise that resolves to the new post object
+    createPostApi(text)
+      .then((post) => {
+        console.log(post);
+
+        // Update backendPosts state by adding the new post at the beginning
+        setBackendPosts([post, ...backendPosts]);
+      })
+      .catch((error) => {
+        // Handle error from createPostApi if necessary
+        console.error("Error creating post:", error);
+      });
+    window.location.reload();
   };
 
   posts.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));

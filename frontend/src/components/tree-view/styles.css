@@ -1,7 +1,18 @@
 .tree-view-container {
+  display: flex;
+  justify-content: flex-start;
   min-height: 100vh;
-  width: 350px;
-  background: rgb(0, 71, 110);
+  width: 100%;
+  background: var(--background_color);
+  color: var(--body_color);
+  font-size: larger;
+}
+
+.menu-item-container {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  color: var(--body_color);
 }
 
 .menu-item {
@@ -9,11 +20,11 @@
   align-items: center;
   gap: 20px;
   cursor: pointer;
-  color: #fff;
 }
 
 .menu-list-container {
   list-style: none;
   margin-top: 0px;
   margin-bottom: 0px;
+  color: var(--body_color);
 }

@@ -1,13 +1,10 @@
 import RenderComponents from "../components/RenderComponents";
-import Posts from "../components/posts/Posts";
 
 function Home() {
   // We will create a post and relative comments section for each Post entity in our database
   return (
-    <div>
+    <div style={{ padding: "20px" }}>
       <RenderComponents />
-
-      <Posts />
     </div>
   );
 }

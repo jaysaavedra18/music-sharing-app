@@ -1,5 +1,8 @@
 import "./Comments.css";
 import CommentForm from "./CommentForm";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faReply, faEdit, faTrash } from "@fortawesome/free-solid-svg-icons"; // Example icons from FontAwesome
+
 const Comment = ({
   comment,
   replies,
@@ -31,6 +34,9 @@ const Comment = ({
     activeComment.id === comment.id;
   const replyId = parentId ? parentId : comment.id;
 
+  const prevBody = comment.body;
+  // console.log("body", comment.body);
+
   return (
     <div className="comment">
       <div className="comment-image-container">
@@ -43,13 +49,15 @@ const Comment = ({
         </div>
         {!isEditing && <div className="comment-text">{comment.body}</div>}
         {isEditing && (
-          <CommentForm
-            submitLabel={"Update"}
-            hasCancelButton
-            intialText={comment.body}
-            handleSubmit={(text) => updateComment(text, comment.id)}
-            handleCancel={() => setActiveComment(null)}
-          />
+          <div className="edit-form-container">
+            <CommentForm
+              submitLabel={"Update"}
+              hasCancelButton
+              initialText={prevBody}
+              handleSubmit={(text) => updateComment(text, comment.id)}
+              handleCancel={() => setActiveComment(null)}
+            />
+          </div>
         )}
 
         {/* comment actions {reply, edit, delete} */}
@@ -60,9 +68,9 @@ const Comment = ({
               onClick={() =>
                 setActiveComment({ id: comment.id, type: "replying" })
               }
-              className="comment-action-text"
+              className="comment-action-icon"
             >
-              Reply
+              <FontAwesomeIcon icon={faReply} />
             </div>
           )}
           {canEdit && (
@@ -71,27 +79,31 @@ const Comment = ({
               onClick={() =>
                 setActiveComment({ id: comment.id, type: "editing" })
               }
-              className="comment-action-text"
+              className="comment-action-icon"
             >
-              Edit
+              <FontAwesomeIcon icon={faEdit} />
             </div>
           )}
           {canDelete && (
             <div
               comment="comment-action"
               onClick={() => deleteComment(comment.id)}
-              className="comment-action-text"
+              className="comment-action-icon"
             >
-              Delete
+              <FontAwesomeIcon icon={faTrash} />
             </div>
           )}
         </div>
-        {isReplying && (
-          <CommentForm
-            submitLabel="Reply"
-            handleSubmit={(text) => addComment(text, replyId)}
-          />
-        )}
+        <div className="reply-form-container">
+          {isReplying && (
+            <CommentForm
+              submitLabel="Reply"
+              hasCancelButton
+              handleSubmit={(text) => addComment(text, replyId)}
+              handleCancel={() => setActiveComment(null)}
+            />
+          )}
+        </div>
         {replies.length > 0 && (
           <div className="replies">
             {replies.map((reply) => (

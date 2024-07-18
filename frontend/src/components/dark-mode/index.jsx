@@ -25,7 +25,7 @@ const DarkMode = () => {
     else setLightMode();
   };
 
-  console.log("loaded darkmode");
+  // console.log("loaded darkmode");
 
   return (
     <div className="dark_mode">

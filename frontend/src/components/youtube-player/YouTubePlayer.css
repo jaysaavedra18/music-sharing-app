@@ -1,0 +1,31 @@
+/* YouTubePlayer.css */
+.youtube-player-container {
+  max-width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the items horizontally */
+}
+
+.youtube-player-container h3 {
+  margin-bottom: 20px;
+}
+
+.youtube-player-wrapper {
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  position: relative;
+  height: 0;
+  overflow: hidden;
+}
+
+.youtube-player {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 3px solid var(--body_color);
+  border-radius: 15px;
+  box-sizing: border-box;
+}

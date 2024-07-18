@@ -36,16 +36,11 @@ export default function ScrollIndicator({ title }) {
 
   return (
     <div>
-      <div className="top-container">
-        <div className="text-overlay">
-          <h1>{title}</h1>
-        </div>
-        <div className="scroll-progress-container">
-          <div
-            className="current-progress-bar"
-            style={{ width: `${scrollPercentage}%` }}
-          ></div>
-        </div>
+      <div className="scroll-progress-container">
+        <div
+          className="current-progress-bar"
+          style={{ width: `${scrollPercentage}%` }}
+        ></div>
       </div>
     </div>
   );

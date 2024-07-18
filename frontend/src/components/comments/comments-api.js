@@ -27,7 +27,7 @@ export const deleteComment = async (id) => {
     .delete(`/api/comments/delete/${id}/`)
     .then((res) => {
       if (res.status === 204) {
-        alert("Comment deleted!");
+        // alert("Comment deleted!");
         return {};
       }
       else alert("Failed to delete comment.");
@@ -67,7 +67,7 @@ export const updateComment = async (text, commentId) => {
     .put(`/api/comments/update/${commentId}/`, { body: text })
     .then((res) => {
       if (res.status === 200) {
-        alert("Comment updated!");
+        // alert("Comment updated!");
         return text
       } else {
         throw new Error("Failed to update comment.");

@@ -1,0 +1,2 @@
+# Ignore db file
+backend/db.sqlite3

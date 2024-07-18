@@ -9,7 +9,7 @@ export const createPost = async (text) => {
             if (res.status === 201) {
                 // alert("Comment created!");
                 const newPost = res.data;
-                console.log(newPost);
+                // console.log(newPost);
                 return {
 
                 }
