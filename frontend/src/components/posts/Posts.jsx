@@ -62,7 +62,7 @@ function Posts() {
   posts.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
 
   return (
-    <div>
+    <div style={{ margin: "20px" }}>
       <div className="posts-container">
         <h3 className="post-title">Share a Song</h3>
         <CommentForm submitLabel={"Share"} handleSubmit={addPost} />
