@@ -3,6 +3,7 @@
   --body_color: black;
   --link_color: rgb(59, 130, 246);
   --header_color: rgb(235, 235, 255);
+  --overlay_color: #f0f0f0;
 }
 
 [data-theme="dark"] {
@@ -10,6 +11,7 @@
   --body_color: white;
   --link_color: cyan;
   --header_color: rgb(75, 0, 130);
+  --overlay_color: #151515;
 }
 
 * {

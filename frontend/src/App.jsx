@@ -10,7 +10,9 @@ import "./App.css";
 import "./index.css";
 import { About } from "./pages/About";
 import { Navbar } from "./components/navbar/Navbar";
-import Contact from "./pages/Contact";
+import ListComponents from "./pages/ListComponents";
+import { Timeline } from "./pages/Timeline";
+import ContactPage from "./pages/ContactPage";
 
 function Logout() {
   localStorage.clear();
@@ -48,12 +50,13 @@ function App() {
               }
             />
             <Route path="/about" element={<About />} />
-
+            <Route path="/timeline" element={<Timeline />} />
             <Route path="/login" element={<Login />} />
-            <Route path="/contact" element={<Contact />} />
+            <Route path="/contact" element={<ContactPage />} />
             <Route path="/logout" element={<Logout />} />
             <Route path="/register" element={<RegisterAndLogout />} />
             <Route path="/demo" element={<Demo />} />
+            <Route path="/listcomponents" element={<ListComponents />} />
             <Route path="/*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>

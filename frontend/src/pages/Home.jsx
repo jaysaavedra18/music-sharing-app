@@ -1,10 +1,15 @@
-import RenderComponents from "../components/RenderComponents";
+import { Banner } from "../components/banner/Banner";
+import { Skills } from "../components/skills/Skills";
+import { Projects } from "../components/projects/Projects";
 
 function Home() {
-  // We will create a post and relative comments section for each Post entity in our database
   return (
-    <div style={{ padding: "20px" }}>
-      <RenderComponents />
+    <div>
+      <Banner />
+      <Skills />
+
+      {/* Projects is WIP */}
+      {/* <Projects /> */}
     </div>
   );
 }

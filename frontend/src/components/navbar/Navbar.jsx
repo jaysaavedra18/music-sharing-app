@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, NavLink } from "react-router-dom";
 import "./navbar.css";
 import ScrollIndicator from "../scroll-indicator";
@@ -6,8 +6,18 @@ import DarkMode from "../dark-mode";
 
 export const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-  const list = ["About", "Contact", "Logout"]; // Example list of link names
-
+  const [list, setList] = useState(["Timeline", "About", "Contact"]); // Example list of link names
+  const currentUserId = localStorage.getItem("currentUserId");
+  useEffect(() => {
+    if (currentUserId) {
+      setList((prevList) => {
+        if (!prevList.includes("Logout")) {
+          return [...prevList, "Logout"];
+        }
+        return prevList;
+      });
+    }
+  }, [currentUserId, list]);
   return (
     <nav style={{ marginBottom: "2rem" }}>
       <Link to="/" className="title">

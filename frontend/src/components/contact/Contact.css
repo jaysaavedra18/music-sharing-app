@@ -1,0 +1,78 @@
+/************ Projects Css ************/
+.contact {
+  padding: 60px 0 200px 0;
+  display: flex;
+  justify-content: center;
+}
+.contact img {
+  width: 100%;
+}
+.contact h2 {
+  font-size: 45px;
+  font-weight: 700;
+  margin: 0 0 30px 0px;
+  color: var(--body_color);
+}
+.contact form input,
+.contact form textarea {
+  width: 100%;
+  box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--body_color);
+  border-radius: 20px;
+  color: var(--body_color);
+  margin: 0 0 8px 0px;
+  padding: 18px 26px;
+  font-weight: 500;
+  font-size: 18px;
+  letter-spacing: 0.8px;
+  transition: 0.3s ease-in-out;
+}
+.contact form input:focus,
+.contact form textarea:focus {
+  background: var(--body_color);
+  color: var(--body_background);
+}
+.contact form input::placeholder,
+.contact form textarea::placeholder {
+  font-size: 16px;
+  font-weight: 400;
+}
+.contact form input:focus::placeholder,
+.contact form textarea:focus::placeholder {
+  color: var(--body_background);
+  opacity: 0.8;
+}
+.contact form button {
+  font-weight: 700;
+  color: var(--body_color);
+  background-color: var(--body_background);
+  padding: 14px 48px;
+  font-size: 18px;
+  margin: 25px 0 0 30px;
+  border-radius: 5px;
+  position: relative;
+  transition: 0.3s ease-in-out;
+}
+.contact form button span {
+  z-index: 1;
+  position: relative;
+}
+.contact form button:hover {
+  color: var(--body_background);
+  background-color: var(--body_color);
+}
+.contact form button::before {
+  content: "";
+  background: var();
+  width: 0;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  transition: 0.3s ease-in-out;
+}
+.contact form button:hover::before {
+  width: 100%;
+}

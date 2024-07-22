@@ -1,5 +1,4 @@
 import React from "react";
-import YouTube from "react-youtube";
 import YouTubePlayer from "../components/youtube-player/YouTubePlayer";
 
 function Demo({}) {
@@ -24,7 +23,7 @@ function Demo({}) {
       {/* <YouTube videoId={videoId} opts={opts} onReady={onReady} /> */}
       <YouTubePlayer
         title={"Live demo here"}
-        url={"https://www.youtube.com/watch?v=6jFVAwtx508"}
+        url={"https://youtu.be/l84o3qjsCf4"}
       />
     </div>
   );
