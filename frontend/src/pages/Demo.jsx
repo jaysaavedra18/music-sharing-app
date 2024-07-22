@@ -1,5 +1,6 @@
 import React from "react";
 import YouTubePlayer from "../components/youtube-player/YouTubePlayer";
+import VideoPlayer from "../components/video-player/VideoPlayer";
 
 function Demo({}) {
   const opts = {
@@ -10,20 +11,17 @@ function Demo({}) {
     },
   };
 
-  const onReady = (event) => {
-    // Access to player in all event handlers via event.target
-    event.target.pauseVideo();
-  };
-
-  const videoId = "6jFVAwtx508";
-  if (!videoId) return <div>Invalid Youtube ID</div>;
-
   return (
     <div style={{ margin: "20px" }}>
-      {/* <YouTube videoId={videoId} opts={opts} onReady={onReady} /> */}
-      <YouTubePlayer
+      {/* <YouTubePlayer
         title={"Live demo here"}
         url={"https://youtu.be/l84o3qjsCf4"}
+      /> */}
+      <VideoPlayer
+        title={"Live Tech Demo"}
+        url={
+          "https://s3.us-east-2.amazonaws.com/www.weallison.com/videos/Final+Demo.mp4"
+        }
       />
     </div>
   );
