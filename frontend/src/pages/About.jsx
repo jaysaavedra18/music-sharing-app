@@ -1,8 +1,9 @@
 import React from "react";
+import "./pages.css";
 
 export const About = () => {
   return (
-    <div style={{ padding: "20px" }}>
+    <div className="about-container" style={{ padding: "20px" }}>
       <h1>About Me</h1>
       <div style={{ marginTop: "20px" }}>
         <p>

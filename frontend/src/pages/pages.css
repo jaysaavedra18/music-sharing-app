@@ -1,0 +1,42 @@
+/* about.css */
+.about-container {
+  padding: 20px;
+  font-size: 24px; /* Base font size for paragraphs and list items */
+}
+
+.about-container h1 {
+  font-size: 50px; /* Smaller font size for h1 */
+  margin: 20px 0;
+}
+
+.about-container h2 {
+  font-size: 34px; /* Smaller font size for h2 */
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.about-container p {
+  margin: 0 0 20px 0;
+}
+
+.about-container ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.about-container ul li {
+  margin-bottom: 10px;
+}
+
+.about-container ul li strong {
+  font-weight: bold;
+}
+
+.about-container ul li a {
+  text-decoration: none;
+  color: #0073e6;
+}
+
+.about-container ul li a:hover {
+  text-decoration: underline;
+}
